@@ -10,6 +10,9 @@
     <meta property="og:description" content="Structured, affordable, and personalized pet training.">
     <meta property="og:type" content="website">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="apple-touch-icon" href="assets/icon.svg">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +34,7 @@
                 <a href="#problem">Problem</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#pricing">Pricing</a>
+                <a href="app.html" class="btn btn-outline btn-small" style="margin-left: 1rem;">Client Login</a>
                 <a href="#cta" class="btn btn-primary btn-small">Book a Demo</a>
             </div>
             <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
@@ -199,25 +203,92 @@
                 <div class="grid feature-cards">
                     <div class="card feature-card">
                         <i class="fa-solid fa-sliders highlight-color"></i>
-                        <h4>Personalized Training</h4>
-                        <p>No cookie-cutter solutions. We build a curriculum just for your dog.</p>
+                        <h4>Full Personalization</h4>
+                        <p>No cookie-cutter solutions. We build a structured curriculum specifically tailored for your dog.</p>
                     </div>
                     <div class="card feature-card">
-                        <i class="fa-solid fa-wand-magic-sparkles accent-color"></i>
-                        <h4>Behavior Correction</h4>
-                        <p>Effective, humane strategies to correct deeply ingrained habits.</p>
+                        <i class="fa-solid fa-mobile-screen-button accent-color"></i>
+                        <h4>Built-in App</h4>
+                        <p>Ditch the chaotic WhatsApp threads. Access your customized training plan directly in our dedicated app.</p>
                     </div>
                     <div class="card feature-card">
-                        <i class="fa-solid fa-file-contract highlight-color"></i>
-                        <h4>Progress Reports</h4>
-                        <p>Detailed analytics and notes sent to you after every interaction.</p>
+                        <i class="fa-solid fa-chart-line highlight-color"></i>
+                        <h4>Real-time Progress Tracking</h4>
+                        <p>Watch your dog's journey unfold with instantaneous milestone updates and trainer logs.</p>
                     </div>
                     <div class="card feature-card">
-                        <i class="fa-solid fa-headset accent-color"></i>
-                        <h4>24/7 Support</h4>
-                        <p>Direct message access to your trainer for those emergency questions.</p>
+                        <i class="fa-solid fa-shield-halved accent-color"></i>
+                        <h4>Rigorous Trainer Vetting</h4>
+                        <p>We work exclusively with certified, highly-experienced professionals using positive reinforcement.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5.5 Comparison Table Section -->
+    <section class="section comparison-section animate-on-scroll" id="comparison">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Why PawPath wins</h2>
+                <p>See how we stack up against the alternatives.</p>
+            </div>
+            <div class="table-container card" style="padding: 0; overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Premium Platforms</th>
+                            <th>Petsfolio</th>
+                            <th>Local Trainers</th>
+                            <th class="highlight-col">PawPath ⭐</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Price Point</td>
+                            <td class="text-error">High (₹5K+/session)</td>
+                            <td class="text-warn">Mid-High</td>
+                            <td class="text-warn">Low (₹500–₹1,500)</td>
+                            <td class="highlight-col success-text">Mid<br>(₹1499–₹2999)</td>
+                        </tr>
+                        <tr>
+                            <td>Structured Program</td>
+                            <td>Partial</td>
+                            <td class="text-muted">Yes</td>
+                            <td>No</td>
+                            <td class="highlight-col"><i class="fa-solid fa-check"></i> Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Tech / App</td>
+                            <td>Basic</td>
+                            <td class="text-muted">Moderate</td>
+                            <td>None</td>
+                            <td class="highlight-col"><i class="fa-solid fa-check"></i> Built-in App</td>
+                        </tr>
+                        <tr>
+                            <td>Personalization</td>
+                            <td>Limited</td>
+                            <td class="text-muted">Moderate</td>
+                            <td>Ad-hoc</td>
+                            <td class="highlight-col"><i class="fa-solid fa-check"></i> Full</td>
+                        </tr>
+                        <tr>
+                            <td>Progress Tracking</td>
+                            <td>No</td>
+                            <td class="text-muted">Partial</td>
+                            <td>No</td>
+                            <td class="highlight-col"><i class="fa-solid fa-check"></i> Real-time</td>
+                        </tr>
+                        <tr>
+                            <td>Trainer Vetting</td>
+                            <td class="text-muted">Yes</td>
+                            <td class="text-muted">Yes</td>
+                            <td>None</td>
+                            <td class="highlight-col"><i class="fa-solid fa-check"></i> Rigorous</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -357,7 +428,7 @@
             <div class="footer-brand">
                 <a href="#" class="logo">
                     <i class="fa-solid fa-dog highlight-color"></i>
-                    <span>Trust<span class="accent-color">Paws</span></span>
+                    <span>Paw<span class="accent-color">Path</span></span>
                 </a>
                 <p>Building better bonds through structured, positive reinforcement training.</p>
             </div>
