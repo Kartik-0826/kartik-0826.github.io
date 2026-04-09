@@ -1,5 +1,4 @@
-# 🐕
-# PawPath 🐾 - Pet Training Landing Page
+# PawPath 🐾 - Pet Training Landing Page 🐕
 
 A premium, modern, SaaS-style landing page for a dog and pet training startup. Built with a focus on dark-mode aesthetics, high conversions, and seamless backend integration.
 
