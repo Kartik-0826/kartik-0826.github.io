@@ -1,4 +1,4 @@
-# PawPath 🐾 - Pet Training Landing Page 🐕
+# PawPath 🐾 - Pet Training Landing Page
 
 A premium, modern, SaaS-style landing page for a dog and pet training startup. Built with a focus on dark-mode aesthetics, high conversions, and seamless backend integration.
 
@@ -12,6 +12,8 @@ A premium, modern, SaaS-style landing page for a dog and pet training startup. B
 - **Instant Backend Lead Form**: Features an integrated demo booking form hooked up to Google Apps Script. 
   - Dynamic dropdowns customized explicitly to match the native dark OS theme.
   - Submits asynchronously using `mode: 'no-cors'` for zero-latency user feedback.
+- **Progressive Web App (PWA)**: Includes an integrated Service Worker (`sw.js`) and Web Manifest allowing users to install the app to their phone and access it completely offline.
+- **Built-in Client App Portal**: Contains an interactive client dashboard (`app.html`) that replicates a native mobile app interface with sticky navigation and utilizes `localStorage` to permanently track dog training milestones.
 
 ## 🛠️ Technologies Used
 
@@ -24,10 +26,15 @@ A premium, modern, SaaS-style landing page for a dog and pet training startup. B
 
 ```text
 /
-├── index.html       # The main markup and structure 
+├── index.html       # The main markup and structure for the landing page
 ├── style.css        # The complete UI design system, variables, and animations
 ├── script.js        # The logic for smooth scrolls, observers, and Google Apps fetch
-└── assets/          # Directory containing hero.png and solution.png
+├── app.html         # The structure for the Client App portal
+├── app.css          # Mobile-first CSS scoped specifically to the App framework
+├── app.js           # Checklist functionality mapped to browser localStorage
+├── manifest.json    # Standardizes the PWA icon, color, and behavior settings
+├── sw.js            # The Service Worker responsible for offline caching
+└── assets/          # Directory containing hero.png, solution.png, and icon.svg
 ```
 
 ## 🔌 Connecting Google Sheets (Lead Generation)
