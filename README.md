@@ -1,168 +1,51 @@
-# 🐕 DogOS – Smart Dog Training Lead System
+# 🐕
+# PawPath 🐾 - Pet Training Landing Page
 
-A modern, minimal landing page with an integrated lead capture system that sends customer data directly to Google Sheets using Google Apps Script.
-
----
+A premium, modern, SaaS-style landing page for a dog and pet training startup. Built with a focus on dark-mode aesthetics, high conversions, and seamless backend integration.
 
 ## 🚀 Features
 
-* 🎯 Clean, responsive landing page (Dog training niche)
-* 💬 WhatsApp floating contact button
-* 📋 Popup lead capture form
-* ⚡ Real-time data submission to Google Sheets
-* 🔗 Google Apps Script backend (no server needed)
-* 📱 Mobile-friendly UI
+- **Premium Design Aesthetics**: Uses a sleek dark navy, vibrant green, and sharp blue color palette (`#0F172A`, `#22C55E`, `#38BDF8`).
+- **Glassmorphism UI**: Semi-transparent background blurs and borders across interactive elements (Pricing cards, feature lists).
+- **Zero-Dependency Animations**: Uses lightweight CSS keyframes and vanilla `IntersectionObserver` in JavaScript to beautifully fade and slide elements in on scroll.
+- **Micro-Interactions**: Hover states built across buttons, anchor links, and specifically enhanced hover tracking for the floating pricing tiers. 
+- **SEO Ready**: Configured with standard Meta tags, Open Graph (OG) social card properties, and a lightweight inline SVG favicon right out of the box.
+- **Instant Backend Lead Form**: Features an integrated demo booking form hooked up to Google Apps Script. 
+  - Dynamic dropdowns customized explicitly to match the native dark OS theme.
+  - Submits asynchronously using `mode: 'no-cors'` for zero-latency user feedback.
 
----
+## 🛠️ Technologies Used
 
-## 🛠️ Tech Stack
+- **HTML5** - Semantic structure and layout.
+- **CSS3** - Custom variables, Flexbox/Grid layouts, custom scrollbars, and keyframe animations.
+- **Vanilla JavaScript (ES6)** - Used for mobile menu toggling, smooth anchor scrolling, and handling POST fetch requests.
+- **Google Apps Script** - Operates as a serverless backend to pipe lead submissions directly into a Google Spreadsheet.
 
-* **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Google Apps Script
-* **Database:** Google Sheets
-* **Integration:** Fetch API + FormData
+## 🗂️ Project Structure
 
----
-
-## 📂 Project Structure
-
-```
-DogOS/
-│── index.html
-│── css/
-│   └── style.css
-│── js/
-│   └── main.js
+```text
+/
+├── index.html       # The main markup and structure 
+├── style.css        # The complete UI design system, variables, and animations
+├── script.js        # The logic for smooth scrolls, observers, and Google Apps fetch
+└── assets/          # Directory containing hero.png and solution.png
 ```
 
----
+## 🔌 Connecting Google Sheets (Lead Generation)
 
-## ⚙️ How It Works
+This landing page sends form submissions (Owner Name, Dog Breed, Issue, Email, Timestamp) directly to a Google Sheet.
 
-1. User fills out the form on the website
-2. JavaScript sends data using `fetch()`
-3. Google Apps Script receives the request (`doPost`)
-4. Data is appended to Google Sheets
-5. Lead is stored instantly
+1. Create a Google Sheet and add headers to Row 1 (`Timestamp`, `Owner Name`, `Email`, `Dog Breed`, `Behavioral Issue`).
+2. Go to `Extensions > Apps Script` and paste the `doPost(e)` function logic.
+3. Deploy as a Web App to explicitly grab a `scriptURL`.
+4. Open `script.js` and replace the `scriptURL` variable with your new endpoint. 
+*Note: We utilize `mode: 'no-cors'` in the JS fetch to bypass Google's slow proxy redirects, ensuring the UI responds instantly to the user.*
 
----
+## 💻 Local Development
 
-## 🔗 Google Sheets Integration
+Because this is a vanilla frontend project, no complex build system or Node packages are required. 
+Simply open `index.html` in any web browser, or use a tool like VS Code's **Live Server** extension to preview it on a local port.
 
-* Data is stored in:
+## 📜 License
 
-  * Name
-  * Phone
-  * Issue
-  * City
-  * Timestamp
-
-* Uses:
-
-```javascript
-sheet.appendRow([...]);
-```
-
----
-
-## 🔧 Setup Instructions
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/DogOS.git
-```
-
----
-
-### 2. Setup Google Sheet
-
-* Create a Google Sheet
-* Add columns:
-
-  ```
-  Name | Phone | Issue | City | Timestamp
-  ```
-
----
-
-### 3. Setup Google Apps Script
-
-* Go to: https://script.google.com
-* Create new project
-* Add:
-
-```javascript
-function doPost(e) {
-  var sheet = SpreadsheetApp
-    .openById("YOUR_SHEET_ID")
-    .getSheetByName("Sheet1");
-
-  var data = e.parameter;
-
-  sheet.appendRow([
-    data.name,
-    data.phone,
-    data.issue,
-    data.city,
-    new Date()
-  ]);
-
-  return ContentService.createTextOutput("SUCCESS");
-}
-```
-
----
-
-### 4. Deploy Script
-
-* Deploy → Manage deployments
-* Type: **Web App**
-* Access: **Anyone**
-* Copy `/exec` URL
-
----
-
-### 5. Connect to Frontend
-
-Update in `main.js`:
-
-```javascript
-fetch("YOUR_WEB_APP_URL", {
-  method: "POST",
-  body: formData
-});
-```
-
----
-
-## 📸 Preview
-
-> Add screenshots of your website here
-
----
-
-## 💡 Future Improvements
-
-* WhatsApp auto-message after form submission
-* Admin dashboard for lead tracking
-* Duplicate lead detection
-* Email notifications
-* CRM integration
-
----
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
-
----
-
-## 🙌 Author
-
-Built by 
-kartik verma 
-utkarsh chaurasia
-bishwas kumar 
-vikas joshi
----
+Created in 2026 for PawPath. 
