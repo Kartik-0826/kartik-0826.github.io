@@ -2,6 +2,8 @@
 
 A premium, modern, SaaS-style landing page for a dog and pet training startup. Built with a focus on dark-mode aesthetics, high conversions, and seamless backend integration.
 
+> ⚠️ This project was created for a business pitch event (concept/demo only).
+
 ## 🚀 Features
 
 - **Premium Design Aesthetics**: Uses a sleek dark navy, vibrant green, and sharp blue color palette (`#0F172A`, `#22C55E`, `#38BDF8`).
